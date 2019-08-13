@@ -1,0 +1,24 @@
+
+    <div class="row">
+        <div class="col-3 list-menu pt-5">
+            <h1>PlaceIt</h1>
+            <ul>
+                <li><%= link_to  "Peliculas", movies_path %></li>
+                <li><%= link_to  "Reservas", reservations_path %></li>
+            </ul>
+        </div>
+        <div class="col-9 pt-5">
+            <div class="d-flex justify-content-between pt-2">
+                <h1 class="">Peliculas</h1>
+                <%= link_to new_movie_path, class: "btn btn-primary btn-lg", remote: true do %>
+                    <%= fa_icon "plus" %> Crear Nueva Pelicula
+                <% end %>
+            </div>
+            <div class="pt-2">
+                <p>ingrese fecha</p>
+            </div>
+            <div class="list-movies pt-2 d-flex flex-wrap">
+                <%= render  @movies %>
+            </div>
+        </div>
+    </div>
