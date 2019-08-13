@@ -1,0 +1,21 @@
+@import "bootstrap";
+@import "font-awesome";
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.list-menu{
+    height: auto;
+    background-color: #2d87e8;
+}
+
+.card {
+    flex: 0 1 30%;
+    padding: 3px;
+    margin: 4px;
+}
+
+.list-menu h1 {
+    text-align: center;
+}

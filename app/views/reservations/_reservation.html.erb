@@ -1,0 +1,9 @@
+<div class="card" id="<%= movie.id %>">
+        <%= link_to new_reservation_path do %>
+    <img class="card-img" src="<%= movie.url %>" alt="Card image">
+    <div class="card-img-overlay">
+        <p class="card-text">Reservar</p>
+    </div>
+        <% end %>
+    <p><%= movie.name %></p>
+</div>
