@@ -1,31 +1,31 @@
-<div id="movie-modal" class="modal fade">
+<div id="reservation-modal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title"><%= title %></h4>
             </div>
-            <%= form_for @movie, remote: true do |f| %>
+            <%= form_for @reservation, remote: true do |f| %>
             <div class="modal-body">
                 <div class="form-group">
-                    <%= f.label :name, "Titulo" %>
+                    <%= f.label :name, "Nombre" %>
                     <%= f.text_field :name, class: "form-control input-lg" %>
                 </div>
                 <div class="form-group">
-                    <%= f.label :description, "Sinopsis" %>
-                    <%= f.text_area :description , class: "form-control input-lg" %>
+                    <%= f.label :email, "Correo" %>
+                    <%= f.text_field :email, class: "form-control input-lg" %>
                 </div>
                 <div class="form-group">
-                    <%= f.label :url, "Poster Url" %>
-                    <%= f.text_field :url, class: "form-control input-lg" %>
+                    <%= f.label :cedula, "Cedula" %>
+                    <%= f.text_field :cedula, class: "form-control input-lg" %>
                 </div>
                 <div class="form-group">
-                    <%= f.label :date, "Fechas" %>
-                    <%= f.date_field :date, class: "form-control input-lg" %>
+                    <%= f.label :cellphone, "Celular" %>
+                    <%= f.text_field :cellphone, class: "form-control input-lg" %>
                 </div>
             </div>
 
             <div class="modal-footer">
-                <%= f.submit class: "btn btn-primary btn-lg btn-block", value: "+ Crear nueva pelicula" %>
+                <%= f.submit class: "btn btn-primary btn-lg btn-block", value: "+ Nueva reserva" %>
             </div>
             <% end %>
         </div>

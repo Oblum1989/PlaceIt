@@ -1,5 +1,5 @@
 <div class="card" id="<%= movie.id %>">
-        <%= link_to new_reservation_path do %>
+        <%= link_to new_reservation_path(movie), remote: true do %>
     <img class="card-img" src="<%= movie.url %>" alt="Card image">
     <div class="card-img-overlay">
         <p class="card-text">Reservar</p>

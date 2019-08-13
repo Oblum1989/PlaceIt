@@ -1,20 +1,22 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Movie.all.order(created_at: :desc)
+    @reservations = Reservation.all.order(created_at: :desc)
   end
 
   def new
-    @movie = Movie.new
+    @reservation = Reservation.new
   end
 
   def create
-    @movie = Movie.create(movie_params)
-    redirect_to movies_path
+    @reservation = Reservation.create(reservation_params)
+    @movie = Movie.find(params[:id])
+    @reservation.movies <<  @movie
+    redirect_to reservations_path
   end
 
   private
 
-  def movie_params
-    params.require(:movie).permit(:name, :description, :url, :date)
+  def reservation_params
+    params.require(:reservation).permit(:name, :email, :cedula, :cellphone)
   end
 end
